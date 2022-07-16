@@ -1,0 +1,20 @@
+{
+  "name": "product-service",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "sls offline",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy:dev": "sls deploy",
+    "deploy:prod": "sls deploy --stage prod",
+    "remove": "sls remove"
+  },
+  "author": "Alexandr Li",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.101",
+    "esbuild": "^0.14.49",
+    "serverless": "^3.21.0",
+    "serverless-esbuild": "^1.31.0",
+    "serverless-offline": "^8.8.1"
+  }
+}
