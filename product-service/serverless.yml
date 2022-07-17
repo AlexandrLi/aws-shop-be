@@ -1,0 +1,35 @@
+service: product-service
+frameworkVersion: "3"
+
+plugins:
+  - serverless-esbuild
+  - serverless-offline
+
+provider:
+  name: aws
+  runtime: nodejs14.x
+  region: eu-west-1
+  stage: dev
+  httpApi:
+    cors: true
+
+custom:
+  stage: ${opt:stage, self:provider.stage}
+  esbuild:
+    watch:
+      pattern: ["src/**/*.ts"] # default .
+
+functions:
+  getProductsList:
+    handler: src/functions/getProductsList.handler
+    events:
+      - httpApi:
+          path: /products
+          method: get
+
+  getProductById:
+    handler: src/functions/getProductById.handler
+    events:
+      - httpApi:
+          path: /products/{productId}
+          method: get
