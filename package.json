@@ -1,0 +1,16 @@
+{
+  "name": "aws-shop-be",
+  "version": "1.0.0",
+  "scripts": {
+    "swagger": "serve swagger -p 3333"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlexandrLi/aws-shop-be.git"
+  },
+  "author": "Alexandr Li",
+  "homepage": "https://github.com/AlexandrLi/aws-shop-be#readme",
+  "devDependencies": {
+    "serve": "^14.0.1"
+  }
+}
