@@ -4,8 +4,8 @@ import { getProductById } from "../models/Product";
 export async function handler(
   event: APIGatewayProxyEvent
 ): Promise<APIGatewayProxyResult> {
-  const { id } = event.pathParameters as { id: string };
-  const product = await getProductById(Number(id));
+  const { productId } = event.pathParameters as { productId: string };
+  const product = await getProductById(Number(productId));
   if (!product) {
     return {
       statusCode: 404,

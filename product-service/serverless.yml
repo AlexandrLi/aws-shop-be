@@ -20,16 +20,16 @@ custom:
       pattern: ["src/**/*.ts"] # default .
 
 functions:
-  getProducts:
-    handler: src/functions/getProducts.handler
+  getProductsList:
+    handler: src/functions/getProductsList.handler
     events:
       - httpApi:
-          path: /${self:custom.stage}/products
+          path: /products
           method: get
 
   getProductById:
     handler: src/functions/getProductById.handler
     events:
       - httpApi:
-          path: /${self:custom.stage}/products/{id}
+          path: /products/{productId}
           method: get

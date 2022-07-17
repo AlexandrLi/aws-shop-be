@@ -1,4 +1,10 @@
-export const db = {
+import { Product } from "./models/Product";
+
+type Database = {
+  products: Product[];
+};
+
+export const db: Database = {
   products: [
     {
       id: 1,
