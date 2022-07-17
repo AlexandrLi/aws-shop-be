@@ -4,8 +4,7 @@
   "scripts": {
     "start": "sls offline --httpPort 3001",
     "test": "vitest",
-    "deploy:dev": "sls deploy",
-    "deploy:prod": "sls deploy --stage prod",
+    "deploy": "sls deploy",
     "remove": "sls remove"
   },
   "author": "Alexandr Li",
